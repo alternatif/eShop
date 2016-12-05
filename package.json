@@ -1,0 +1,19 @@
+{
+  "name": "eShop",
+  "version": "0.0.2",
+  "description": "A platform to shop online",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+   "express" : "~4.5.1",
+   "mongoose" : "~4.6.4",
+   "body-parser" : "~1.4.2",
+   "method-override" : "~2.0.2",
+   "csprng" : "~0.1.1",
+   "crypto":"~0.0.3",
+   "morgan":"latest"
+  }
+}
