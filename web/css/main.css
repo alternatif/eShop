@@ -1,22 +1,45 @@
+.btn-primary {
+  background: #ff0066;
+  border-color: #ff0066;
+}
 
+.btn-primary:hover {
+  background: #800033;
+  border-color: #800033;
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+.btn-success {
+  background: #336699;
+  border-color: #336699;
+}
 
+.btn-success:hover {
+  background: #1f4060;
+  border-color: #1f4060;
+}
 
+.btn-sm {
+  background: #336699;
+  border-color: #336699;
+}
 
+.jumbotron {
+  background: #262626;
+  color: #ff0066;
+  text-align: center;
+}
 
+.input-sm {
+  height: 34px;
+}
 
+.search-bar {
+  text-align: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+#btnDropdown {
+  background: #336699;
+  border-color: #336699;
+  color: white;
+  text-shadow: none;
+}
