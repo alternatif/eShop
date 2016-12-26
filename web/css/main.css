@@ -27,6 +27,8 @@
   background: #262626;
   color: #ff0066;
   text-align: center;
+  /*background: #262626 url('../witcher_3.jpg') no-repeat center;*/
+  background-size: 100%;
 }
 
 .input-sm {
@@ -43,3 +45,13 @@
   color: white;
   text-shadow: none;
 }
+
+.categ {
+  max-width: 400px;
+  margin: auto;
+}
+
+/*
+body {
+  background: #262626 url('../witcher.png') no-repeat bottom;
+}*/
