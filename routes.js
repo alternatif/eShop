@@ -33,12 +33,8 @@ module.exports = function(app) {
     });
 
 
-	app.get('/index', function(req, res) {
-		res.sendfile('index.html', {root: '/web'});
+	app.get('*', function(req, res) {
+		res.sendfile('./web/index.html');
 	});
-
-  app.get('/register', function(req, res) {
-    res.sendfile('register.html', {root: 'web'});
-  });
 
 };
