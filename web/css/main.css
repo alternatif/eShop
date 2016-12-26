@@ -51,6 +51,11 @@
   margin: auto;
 }
 
+.jumbotron {
+  background-image: url("../img/head.jpg");
+background-size: cover;
+}
+
 /*
 body {
   background: #262626 url('../witcher.png') no-repeat bottom;
