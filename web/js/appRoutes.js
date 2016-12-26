@@ -13,6 +13,16 @@ $routeProvider
   controller: 'ProductsController'
 })
 
+.when('/product_new', {
+  templateUrl: 'views/product_new.html',
+  controller: 'ProductsController'
+})
+
+.when('/register', {
+  templateUrl: 'views/register.html',
+  controller: 'RegisterController'
+})
+
 .when('/cart', {
   templateUrl: 'views/cart.html',
   controller: 'CartController'

@@ -1,10 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-md-4" ng-show="products.length < 1"> There is not product to display</div>
-    <a ui-sref="newProduct">New Product</a>
     <div class="col-sm-6 col-md-4" ng-repeat="product in products">
       <div class="thumbnail">
+        <a href="#productModal" class="store-link" data-toggle="modal">
         <img src="http://placehold.it/300x200" alt="{{product.title}}">
+      </a>
         <div class="caption">
           <h3>{{product.title}}</h3>
           <p>{{product.description | limitTo: 200}} ...</p>
@@ -18,3 +19,32 @@
     </div>
   </div>
 </div>
+
+<div class="modal-form modal fade" id="productModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Test</h2>
+                            <p>LELELLELE</p>
+                            <img src="http://placehold.it/300x200" alt="">
+                            <p>
+                            <li>This is random text</li>
+                            <li>Yay this is some description random.</li>
+                            </p>
+                            <h3>Price : 49$</h3><br>
+                            <button type="button" class="btn btn-success" data-dismiss="modal"><i></i> Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
