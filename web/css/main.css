@@ -1,6 +1,6 @@
 .btn-primary {
-  background: #ff0066;
-  border-color: #ff0066;
+  background: #ff6666;
+  border-color: #ff6666;
 }
 
 .btn-primary:hover {
@@ -25,7 +25,7 @@
 
 .jumbotron {
   background: #262626;
-  color: #ff0066;
+  color: #333333;
   text-align: center;
   /*background: #262626 url('../witcher_3.jpg') no-repeat center;*/
   background-size: 100%;
@@ -54,6 +54,22 @@
 .jumbotron {
   background-image: url("../img/head.jpg");
 background-size: cover;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #ff9999;
+}
+
+.game {
+  max-height: 372px;
+}
+
+body {
+  background-color: #f2f2f2;
 }
 
 /*
