@@ -61,165 +61,52 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-sm-3">
-        <div class="thumbnail game">
+      <div class="col-sm-3" ng-repeat="product in products">
+        <div class="thumbnail game" >
           <!-- <img src="http://placehold.it/300x200"> -->
-          <img src="../img/PC/overwatch_pc.jpg">
+          <a href="#productModal{{product._id}}" class="store-link" data-toggle="modal">
+          <img src="{{product.picture}}">
+        </a>
           <div class="caption">
-            <h3>Overwatch</h3>
-            <p>FPS Online</p>
-            <p><strong>$60</strong></p>
+            <h3>{{product.title}}</h3>
+            <p>{{product.description}}</p>
+            <p><strong>${{product.price}}</strong></p>
             <p>
               <a href="#" class="btn btn-primary" role="button">Add to cart</a>
-              <a href="/product_details/{{product._id}}" class="btn btn-default" role="button">Details</a>
+              <a href="#productModal" class="btn btn-default" data-toggle="modal" role="button">Details</a>
             </p>
           </div>
         </div>
       </div>
-
-      <div class="col-sm-3">
-        <div class="thumbnail game">
-          <!-- <img src="http://placehold.it/300x200"> -->
-          <img src="../img/PC/witcher_pc_test.jpg">
-          <div class="caption">
-            <h3>The Witcher 3</h3>
-            <p>RPG</p>
-            <p><strong>$30</strong></p>
-            <p>
-              <a href="#" class="btn btn-primary" role="button">Add to cart</a>
-              <a href="/product_details/{{product._id}}" class="btn btn-default" role="button">Details</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-3">
-        <div class="thumbnail game">
-          <!-- <img src="http://placehold.it/300x200"> -->
-          <img src="../img/PS4/titanfall2_ps4.jpg">
-          <div class="caption">
-            <h3>Titanfall 2</h3>
-            <p>FPS Online</p>
-            <p><strong>$70</strong></p>
-            <p>
-              <a href="#" class="btn btn-primary" role="button">Add to cart</a>
-              <a href="/product_details/{{product._id}}" class="btn btn-default" role="button">Details</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="thumbnail game">
-          <!-- <img src="http://placehold.it/300x200"> -->
-          <img src="../img/XO/skyrim_xo.jpg">
-          <div class="caption">
-            <h3>Skyrim</h3>
-            <p>RPG</p>
-            <p><strong>$60</strong></p>
-            <p>
-              <a href="#" class="btn btn-primary" role="button">Add to cart</a>
-              <a href="/product_details/{{product._id}}" class="btn btn-default" role="button">Details</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
 
 </div>
 </div>
-
-<!-- <div class="row">
-  <fieldset>
-    <h2>Item list</h2>
-      <table class="table table-hover">
-          <thead>
-          <tr>
-              <th>Product name</th><th>Description</th><th>Quantity</th>
-              <th>Price</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-              <td>
-                  Banana
-                  <input type="hidden" name="product_name" value="banana">
-              </td>
-              <td>Mmmm yummy fresh banana</td>
-              <td>
-                  <input type="number" data-price="1.99" name="quantity"
-                    value="0" min="0" max="999">
-              </td>
-              <td>$1.99</td>
-          </tr>
-          <tr>
-              <td>
-                  Strawberry
-                  <input type="hidden" name="product_name" value="strawberry">
-              </td>
-              <td>Mmmm yummy fresh strawberries!! </td>
-              <td>
-                  <input type="number" data-price="0.99" name="quantity"
-                    value="0" min="0" max="999">
-              </td>
-              <td>$0.99</td>
-          </tr>
-          <tr>
-              <td>
-                  Potato
-                  <input type="hidden" name="product_name" value="potato">
-              </td>
-              <td>Mmmm yummy little potato!</td>
-              <td>
-                  <input type="number" data-price="0.99" name="quantity"
-                    value="0" min="0" max="999">
-              </td>
-              <td>$0.99</td>
-          </tr>
-          <tr>
-              <td>
-                  Pizza
-                  <input type="hidden" name="product_name" value="pizza">
-              </td>
-              <td>Mmmm yummy home made pizza from italian chef</td>
-              <td>
-                  <input type="number" data-price="9.99" name="quantity"
-                    value="0" min="0" max="999">
-              </td>
-              <td>$9.99</td>
-          </tr>
-          <tr>
-              <td>
-                  Salmon
-                  <input type="hidden" name="product_name" value="salmon">
-              </td>
-              <td>Mmmm yummy fresh fish</td>
-              <td>
-                  <input type="number" data-price="14.99" name="quantity"
-                    value="0" min="0" max="999">
-              </td>
-              <td>$14.99</td>
-          </tr>
-          <tr>
-              <td>
-                  Beef steak
-                  <input type="hidden" name="product_name" value="beef_steak">
-              </td>
-              <td>Mmmm yummy meaty beef steak!</td>
-              <td>
-                  <input type="number" data-price="23.99" name="quantity"
-                    value="0" min="0" max="999">
-              </td>
-              <td>$23.99</td>
-          </tr>
-          </tbody>
-          <tfoot>
-          <tr>
-              <td colspan="4">Order Total</td>
-              <td>
-                  <output name="order_total" id="order_total">$0.00</output>
-              </td>
-          </tr>
-          </tfoot>
-      </table>
-  </fieldset>
-</div> -->
+<div ng-repeat="product in products">
+<div class="modal-form modal fade" id="productModal{{product._id}}" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2 class="product-name">{{product.title}}</h2>
+                            <p>One of the best game of the year !</p>
+                            <img src="{{product.picture}}" alt="" class="img-product">
+                            <p>
+                            <li>{{product.description}}</li>
+                            </p>
+                            <h3>Price : {{product.price}}$</h3><br>
+                            <button type="button" class="btn btn-success" data-dismiss="modal"><i></i>Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
