@@ -51,7 +51,7 @@ Step 2 : Launch the server
 ```
 $ node server.js
 ```
-Step 3: Let the magic happens
+Step 3:
 ```
 ???
 ```
