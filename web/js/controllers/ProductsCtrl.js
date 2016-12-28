@@ -1,7 +1,23 @@
 angular.module('ProductsCtrl', [])
   .controller('ProductsController', function ($scope, Products) {
-    $scope.products = Products;
+    Products.get()
+			.success(function(data) {
+				$scope.products = data;
+			});
   });
+
+  angular.module('ProductsAddCtrl', [])
+    .controller('ProductsAddController', function ($scope, $http) {
+      $scope.addProduct = function() {
+        $scope.formData.picture = 'http://placehold.it/150x150';
+        $http.post('/products/', $scope.formData).success(function(data) {
+          console.log("posted successfully");
+        }).error(function(data) {
+          console.error("error in posting");
+        })
+        }
+    });
+
 
 angular.module('CartCtrl', [])
   .controller('CartController', function($scope) {

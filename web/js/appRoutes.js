@@ -15,8 +15,9 @@ $routeProvider
 
 .when('/product_new', {
   templateUrl: 'views/product_new.html',
-  controller: 'ProductsController'
+  controller: 'ProductsAddController'
 })
+
 
 .when('/register', {
   templateUrl: 'views/register.html',

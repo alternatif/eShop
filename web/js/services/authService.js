@@ -1,10 +1,7 @@
-(function () {
+angular.module('auth', [])
+  .service('auth', function () {
 
-  angular
-    .module('eShop')
-    .service('authentication', authentication);
-
-  authentication.$inject = ['$http', '$window'];
+  auth.$inject = ['$http', '$window'];
   function authentication ($http, $window) {
 
     var saveToken = function (token) {
@@ -64,4 +61,4 @@ login = function(user) {
     };
   }
 
-})();
+});

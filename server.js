@@ -12,7 +12,7 @@ var routesApi = require('./routes')
 
 var port = process.env.PORT || 8080;
 //mongoose.connect(db.url);
-mongoose.connect('mongodb://localhost:27017/FullStack');
+mongoose.connect('mongodb://alternatif:alternatif-gameshop@ds145118.mlab.com:45118/gameshop');
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));

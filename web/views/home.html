@@ -65,7 +65,7 @@
         <div class="thumbnail game" >
           <!-- <img src="http://placehold.it/300x200"> -->
           <a href="#productModal{{product._id}}" class="store-link" data-toggle="modal">
-          <img src="{{product.picture}}">
+          <img src="{{product.picture}}" class="img-product-home">
         </a>
           <div class="caption">
             <h3>{{product.title}}</h3>
@@ -73,40 +73,39 @@
             <p><strong>${{product.price}}</strong></p>
             <p>
               <a href="#" class="btn btn-primary" role="button">Add to cart</a>
-              <a href="#productModal" class="btn btn-default" data-toggle="modal" role="button">Details</a>
+              <a href="#productModal{{product._id}}" class="btn btn-default" data-toggle="modal" role="button">Details</a>
             </p>
           </div>
         </div>
-      </div>
-
-</div>
-</div>
-<div ng-repeat="product in products">
-<div class="modal-form modal fade" id="productModal{{product._id}}" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <div class="modal-form modal fade" id="productModal{{product._id}}" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2 class="product-name">{{product.title}}</h2>
-                            <p>One of the best game of the year !</p>
-                            <img src="{{product.picture}}" alt="" class="img-product">
-                            <p>
-                            <li>{{product.description}}</li>
-                            </p>
-                            <h3>Price : {{product.price}}$</h3><br>
-                            <button type="button" class="btn btn-success" data-dismiss="modal"><i></i>Back</button>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here -->
+                                    <h2 class="product-name">{{product.title}}</h2>
+                                    <p>One of the best game of the year !</p>
+                                    <img src="{{product.picture}}" alt="" class="img-product">
+                                    <p>
+                                    <li>{{product.description}}</li>
+                                    </p>
+                                    <p>Quantity : {{product.quantity}}</p>
+                                    <h3>Price : {{product.price}}$</h3><br>
+                                    <button type="button" class="btn btn-success" data-dismiss="modal"><i></i>Back</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-  </div>
+      </div>
+
+</div>
+</div>

@@ -1,14 +1,14 @@
 <div class="container">
-        <form class="form-horizontal">
+        <form class="form-horizontal" ng-submit="onSubmit()">
 
         <!-- Form Name -->
-        <h1>{{tagline}}</h1>
+        <h1>Register</h1>
 
         <!-- Text input-->
         <div class="form-group">
           <label class="col-md-4 control-label" for="username">Username</label>
           <div class="col-md-4">
-          <input id="username" name="username" type="text" placeholder="Enter your username" class="form-control input-md" required="">
+          <input id="username" name="username" type="text" placeholder="Enter your username" class="form-control input-md" ng-model="formRegister.name"  required="">
 
           </div>
         </div>
@@ -17,7 +17,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="password">Password</label>
           <div class="col-md-4">
-            <input id="password" name="password" type="password" placeholder="Enter your password" class="form-control input-md" required="">
+            <input id="password" name="password" type="password" placeholder="Enter your password" class="form-control input-md" ng-model="formRegister.password" required="">
 
           </div>
         </div>
@@ -37,13 +37,13 @@
           <div class="col-md-4">
           <div class="radio">
             <label for="account-type-0">
-              <input type="radio" name="account-type" id="account-type-0" value="1" checked="checked">
+              <input type="radio" name="account-type" id="account-type-0" value="1" ng-model="formRegister.seller" checked="checked">
               Seller
             </label>
         	</div>
           <div class="radio">
             <label for="account-type-1">
-              <input type="radio" name="account-type" id="account-type-1" value="2">
+              <input type="radio" name="account-type" id="account-type-1" ng-model="formRegister.buyer" value="2">
               Client
             </label>
         	</div>
@@ -54,7 +54,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="register-btn"></label>
           <div class="col-md-4">
-            <button id="register-btn" name="register-btn" class="btn btn-primary">Register</button>
+            <button type="submit" id="register-btn" name="register-btn" class="btn btn-primary">Register</button>
           </div>
         </div>
         </form>

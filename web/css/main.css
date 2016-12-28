@@ -74,6 +74,12 @@ body {
 
 .img-product {
   max-width: 500px;
+  max-height: 250px;
+}
+
+.img-product-home {
+  max-width:150px;
+  max-height:150px;
 }
 
 .product-name {
