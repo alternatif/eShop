@@ -1,1 +1,1 @@
-angular.module('eShop', ['ngRoute', 'appRoutes', 'MainCtrl', 'ProductsCtrl', 'ProductsService', 'CartCtrl', 'RegisterCtrl', 'ProductsAddCtrl']);
+angular.module('eShop', ['ngRoute', 'appRoutes', 'ProductsCtrl', 'ProductsService', 'CartCtrl', 'RegisterCtrl', 'ProductsAddCtrl']);
